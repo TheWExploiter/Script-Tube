@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Script Tube - Upload and Watch Videos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Script Tube</h1>
+    <input type="text" id="search-bar" placeholder="Search Videos..." oninput="searchVideos()">
+  </header>
+
+  <main>
+    <section id="upload-section">
+      <h2>Upload Your Video</h2>
+      <form id="upload-form" enctype="multipart/form-data">
+        <input type="text" id="title" placeholder="Video Title" required>
+        <textarea id="description" placeholder="Video Description" required></textarea>
+        <input type="file" id="video-file" accept="video/*" required>
+        <input type="file" id="thumbnail" accept="image/*">
+        <button type="submit">Upload Video</button>
+      </form>
+    </section>
+
+    <section id="video-list">
+      <h2>Recent Videos</h2>
+      <div id="videos-container"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
